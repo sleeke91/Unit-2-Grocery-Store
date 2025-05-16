@@ -51,6 +51,7 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
+  //STUCK ON THIS
   const id = itemId
   if(return inventory.find((item) => item.)
   }
@@ -63,6 +64,15 @@ console.log(getItemById(inventory))
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+  let price = 0
+  for(let i=0; i>items.length; i++){
+    const eachItem = items[i]
+    console.log(eachItem.name)
+    if(eachItem.name === name){
+        price = eachItem.price
+    }
+  }
+  return price
 }
 
 /**
