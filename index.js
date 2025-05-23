@@ -49,13 +49,9 @@ function getUppercaseNames(items) {
  * @param {number} id - id of the item to find
  * @returns {Item} - the item in `items` with the given `id`
  */
-function getItemById(items, id) {
+function getItemById(items, id) {}
   // TODO: use `find`
   //STUCK ON THIS
-  const id = itemId
-  if(return inventory.find((item) => item.)
-  }
-console.log(getItemById(inventory))
 
 /**
  * @param {Item[]} items - array of items
