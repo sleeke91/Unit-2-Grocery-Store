@@ -27,7 +27,7 @@ const inventory = [
  */
 function logNames(items) {
   // TODO: use `forEach`
-  const eachInput = items.forEach(item => {console.log(item.name);})
+  const eachInput = items.forEach((item) => {console.log(item.name);})
 }
 
 /**
@@ -36,7 +36,7 @@ function logNames(items) {
  */
 function getUppercaseNames(items) {
   // TODO: use `map`
-  const upperCaseArray = items.map(item => {
+  const upperCaseArray = items.map((item) => {
     return {
       name: item.name.toUpperCase(),
     }
@@ -49,9 +49,10 @@ function getUppercaseNames(items) {
  * @param {number} id - id of the item to find
  * @returns {Item} - the item in `items` with the given `id`
  */
-function getItemById(items, id) {}
+function getItemById(items, id) {
   // TODO: use `find`
-  //STUCK ON THIS
+  return items.find( item => item.id === id )
+}
 
 /**
  * @param {Item[]} items - array of items
@@ -60,15 +61,10 @@ function getItemById(items, id) {}
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
-  let price = 0
-  for(let i=0; i>items.length; i++){
-    const eachItem = items[i]
-    console.log(eachItem.name)
-    if(eachItem.name === name){
-        price = eachItem.price
-    }
-  }
-  return price
+  for(let i=0; i<items.length; i++){
+    if(items[i].name === name){
+        return items[i].price; //CAN USE A RETURN AS A HARD-OUT OR STOP!!!
+    }}
 }
 
 /**
@@ -78,6 +74,7 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
+  return items.filter ( item => item.category.toLowerCase() === category.toLowerCase()) 
 }
 
 /**
@@ -86,6 +83,7 @@ function getItemsByCategory(items, category) {
  */
 function countItems(items) {
   // TODO: use `reduce`
+  return items.reduce((acc, cur) => acc + cur.quantity, 0)
 }
 
 /**
@@ -94,6 +92,7 @@ function countItems(items) {
  */
 function getTotalPrice(items) {
   // TODO: use `reduce`
+  return items.reduce((acc, cur) => acc + cur.price, 0)
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
